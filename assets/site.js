@@ -1,6 +1,7 @@
 'use strict';
 (() => {
-  const key = 'cpp-labs-lab7-v1';
+  const lesson = document.body.dataset.lesson || 'lab7';
+  const key = `cpp-labs-${lesson}-v1`;
   let saved = { answers: {}, done: {} };
   let toastTimer;
   try { const data = JSON.parse(localStorage.getItem(key)); if (data && typeof data === 'object') saved = { answers: data.answers || {}, done: data.done || {} }; } catch { /* Storage may be disabled. */ }
@@ -42,7 +43,7 @@
       else { feedback.textContent = 'Try again. Read the task and open the hint. Write only the missing part.'; feedback.className = 'feedback error'; input.setAttribute('aria-invalid', 'true'); }
     });
     step.querySelector('[data-copy]').addEventListener('click', () => copy(source(step), input.value.trim() ? 'Full code copied. Run it in your C++ compiler.' : 'Code copied. Replace ____ before you compile.'));
-    step.querySelector('[data-download]').addEventListener('click', () => { const url = URL.createObjectURL(new Blob([source(step)], { type: 'text/plain;charset=utf-8' })); const a = document.createElement('a'); a.href = url; a.download = `step-${number}.cpp`; a.click(); setTimeout(() => URL.revokeObjectURL(url), 1000); });
+    step.querySelector('[data-download]').addEventListener('click', () => { const url = URL.createObjectURL(new Blob([source(step)], { type: 'text/plain;charset=utf-8' })); const a = document.createElement('a'); a.href = url; a.download = lesson === 'lab7' ? `step-${number}.cpp` : `${lesson}-step-${number}.cpp`; a.click(); setTimeout(() => URL.revokeObjectURL(url), 1000); });
     const check = step.querySelector('.done-check'); check.checked = saved.done[number] === true;
     check.addEventListener('change', () => { saved.done[number] = check.checked; persist(); updateProgress(); });
   });
