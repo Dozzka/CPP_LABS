@@ -3,22 +3,36 @@
 <meta name="description" content="Learn C++ structures in six small steps. Simple English, complete programs, one gap, hints, input and expected output.">
 <meta name="theme-color" content="#132b38"><meta name="color-scheme" content="light">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'none'">
-<title>C++ Labs — Structures and student records</title><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/site.css"><script src="assets/site.js" defer></script>
+<title data-i18n="lab8.page_title">C++ Labs — Structures and student records</title><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/site.css?v=20261118-lang"><script src="assets/i18n.js?v=20261118-lang" defer></script><script src="assets/site.js?v=20261118-lang" defer></script>
 </head><body data-lesson="lab8">
-<a class="skip-link" href="#main">Skip to lesson</a>
-<header class="mobile-bar"><a class="brand" href="#start"><span class="brand-mark">C++</span><span>CPP LABS</span></a><button id="menu-toggle" type="button" aria-expanded="false" aria-controls="lesson-menu">Lesson menu</button></header>
-<aside class="rail" id="lesson-menu" aria-label="Lesson navigation">
-  <a class="brand" href="#start"><span class="brand-mark">C++</span><span>CPP LABS</span></a><nav class="lesson-switch" aria-label="Choose a lab"><a href="lab7.html">Lab 7 · Functions</a><a href="lab8.html">Lab 8 · Structures</a></nav>
-  <p class="rail-caption">Lab 8 · Your lesson</p>
-  <nav class="lesson-nav" aria-label="Lesson steps"><a href="#start" aria-current="location"><span class="nav-number">i</span><span>Start here</span></a><a href="#step-1"><span class="nav-number">1</span><span>One student</span></a><a href="#step-2"><span class="nav-number">2</span><span>Read one student</span></a><a href="#step-3"><span class="nav-number">3</span><span>A list of students</span></a><a href="#step-4"><span class="nav-number">4</span><span>Students who passed</span></a><a href="#step-5"><span class="nav-number">5</span><span>The best score</span></a><a href="#step-6"><span class="nav-number">6</span><span>A function for a student</span></a><a href="#words"><span class="nav-number">?</span><span>Useful words</span></a></nav>
-  <div class="rail-bottom"><div class="progress-label"><span>Your progress</span><strong id="progress-count">0 / 6</strong></div><div class="progress-track" role="progressbar" aria-label="Completed steps" aria-valuemin="0" aria-valuemax="6" aria-valuenow="0"><div class="progress-fill"></div></div><p>Your progress stays in this browser.</p><button class="text-button" type="button" data-reset>Reset answers &amp; progress</button></div>
+<a class="skip-link" href="#main" data-i18n="skip">Skip to lesson</a>
+<header class="mobile-bar"><a class="brand" href="#start" dir="ltr" translate="no"><span class="brand-mark">C++</span><span>CPP LABS</span></a><div class="mobile-actions"><div class="language-picker language-picker--mobile">
+    <button class="language-toggle" type="button" aria-expanded="false" aria-controls="language-options-mobile" aria-label="Choose language" data-i18n-aria="language_choose" title="Choose language">
+      <svg viewbox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"></circle><ellipse cx="12" cy="12" rx="4" ry="9"></ellipse><path d="M3 12h18M5 6.5h14M5 17.5h14"></path></svg>
+      <span class="language-current" lang="en" dir="auto">English</span>
+    </button>
+    <div class="language-options" id="language-options-mobile" role="group" aria-label="Choose language" data-i18n-aria="language_choose" hidden>
+    <button class="language-option" type="button" data-language="en" lang="en" dir="auto" aria-pressed="true">English</button><button class="language-option" type="button" data-language="ru" lang="ru" dir="auto" aria-pressed="false">Русский</button><button class="language-option" type="button" data-language="fr" lang="fr" dir="auto" aria-pressed="false">Français</button><button class="language-option" type="button" data-language="ar" lang="ar" dir="auto" aria-pressed="false">العربية</button>
+    </div></div><button id="menu-toggle" type="button" aria-expanded="false" aria-controls="lesson-menu" data-i18n="menu_open">Lesson menu</button></div></header>
+<aside class="rail" id="lesson-menu" aria-label="Lesson navigation" data-i18n-aria="lesson_navigation">
+  <a class="brand" href="#start" dir="ltr" translate="no"><span class="brand-mark">C++</span><span>CPP LABS</span></a><nav class="lesson-switch" aria-label="Choose a lab" data-i18n-aria="choose_lab"><a href="lab7.html" data-i18n="lab7_link">Lab 7 · Functions</a><a href="lab8.html" data-i18n="lab8_link">Lab 8 · Structures</a></nav>
+  <p class="rail-caption" data-i18n="lab8.rail_caption">Lab 8 · Your lesson</p>
+  <nav class="lesson-nav" aria-label="Lesson steps" data-i18n-aria="lesson_navigation"><a href="#start" aria-current="location"><span class="nav-number">i</span><span data-i18n="start_here">Start here</span></a><a href="#step-1"><span class="nav-number">1</span><span data-i18n="lab8.step1.title">One student</span></a><a href="#step-2"><span class="nav-number">2</span><span data-i18n="lab8.step2.title">Read one student</span></a><a href="#step-3"><span class="nav-number">3</span><span data-i18n="lab8.step3.title">A list of students</span></a><a href="#step-4"><span class="nav-number">4</span><span data-i18n="lab8.step4.title">Students who passed</span></a><a href="#step-5"><span class="nav-number">5</span><span data-i18n="lab8.step5.title">The best score</span></a><a href="#step-6"><span class="nav-number">6</span><span data-i18n="lab8.step6.title">A function for a student</span></a><a href="#words"><span class="nav-number">?</span><span data-i18n="words">Useful words</span></a></nav>
+  <div class="rail-bottom"><div class="progress-label"><span data-i18n="progress">Your progress</span><strong id="progress-count">0 / 6</strong></div><div class="progress-track" role="progressbar" aria-label="Completed steps" aria-valuemin="0" aria-valuemax="6" aria-valuenow="0" data-i18n-aria="completed_steps"><div class="progress-fill"></div></div><p data-i18n="browser_progress">Your progress stays in this browser.</p><button class="text-button" type="button" data-reset data-i18n="reset">Reset answers &amp; progress</button></div>
 </aside>
 <main class="page" id="main"><div class="content">
-  <div class="topline"><span>C++ / Student guide</span><a href="downloads/lab8-structures-student-guide-en.pptx" download>Download slides &darr;</a></div>
+  <div class="topline"><span data-i18n="student_guide">C++ / Student guide</span><div class="language-picker language-picker--desktop">
+    <button class="language-toggle" type="button" aria-expanded="false" aria-controls="language-options-desktop" aria-label="Choose language" data-i18n-aria="language_choose" title="Choose language">
+      <svg viewbox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"></circle><ellipse cx="12" cy="12" rx="4" ry="9"></ellipse><path d="M3 12h18M5 6.5h14M5 17.5h14"></path></svg>
+      <span class="language-current" lang="en" dir="auto">English</span>
+    </button>
+    <div class="language-options" id="language-options-desktop" role="group" aria-label="Choose language" data-i18n-aria="language_choose" hidden>
+    <button class="language-option" type="button" data-language="en" lang="en" dir="auto" aria-pressed="true">English</button><button class="language-option" type="button" data-language="ru" lang="ru" dir="auto" aria-pressed="false">Русский</button><button class="language-option" type="button" data-language="fr" lang="fr" dir="auto" aria-pressed="false">Français</button><button class="language-option" type="button" data-language="ar" lang="ar" dir="auto" aria-pressed="false">العربية</button>
+    </div></div></div>
   <div id="start">
-    <section class="hero" aria-labelledby="lesson-title"><p class="eyebrow">Lab 08 · Beginner practice</p><h1>Structures <span>&amp; student records.</span></h1><p class="hero-intro">One student, then a list.<br>Six small steps with one gap at a time.</p><div class="hero-actions"><a class="button" id="continue-link" href="#step-1">Start Step 1</a><button class="button secondary" type="button" data-print>Print this guide</button></div><p class="hero-note">The same lesson for both classroom groups. C++11 compatible.</p></section>
-    <section class="intro" aria-labelledby="how-title"><h2 id="how-title">A small student list</h2><p>Each student has a <strong>name</strong> and a <strong>score</strong>. A <code>struct</code> keeps these values together. We will print a list, show students who passed, and find the best score.</p><ol class="how-list"><li>Read the explanation and task.</li><li>Copy the <strong>whole program</strong> into one <code>.cpp</code> file.</li><li>Replace <code>____</code> with the missing part.</li><li>Run the program and compare the output.</li><li>Replace the old program with the next step.</li></ol><p class="rule"><strong>Input rules.</strong> Use one word for each name, with Latin letters. Scores are integers from 0 to 100. Step 1 has no input. Step 2 reads one student. Steps 3 to 6 read three students. Do not type a size first. The passing score is 60 for this exercise.</p><noscript><p class="noscript">All programs and downloads work without JavaScript. Enable JavaScript to check gaps and save progress.</p></noscript></section>
-    <section class="example" aria-labelledby="example-title"><h2 id="example-title">A complete example</h2><p class="read"><code>Student</code> is a type. <code>student</code> is one variable. <code>student.name</code> and <code>student.score</code> are its fields. A dot selects a field.</p><div class="code-shell"><div class="code-bar"><span class="code-name">One student, two fields</span><div class="code-tools"><button type="button" data-copy-example>Copy example</button></div></div><pre tabindex="0"><code id="function-example">#include &lt;iostream&gt;
+    <section class="hero" aria-labelledby="lesson-title"><p class="eyebrow" data-i18n="lab8.eyebrow">Lab 08 · Beginner practice</p><h1 data-i18n-html="lab8.hero">Structures <span>&amp; student records.</span></h1><p class="hero-intro" data-i18n-html="lab8.hero_intro">One student, then a list.<br>Six small steps with one gap at a time.</p><div class="hero-actions"><a class="button" id="continue-link" href="#step-1" data-i18n="start_step1">Start Step 1</a><button class="button secondary" type="button" data-print data-i18n="print">Print this guide</button></div><p class="hero-note" data-i18n="compatibility">The same lesson for both classroom groups. C++11 compatible.</p></section>
+    <section class="intro" aria-labelledby="how-title"><h2 id="how-title" data-i18n="lab8.intro_title">A small student list</h2><p data-i18n-html="lab8.intro_text">Each student has a <strong>name</strong> and a <strong>score</strong>. A <code dir="ltr" translate="no">struct</code> keeps these values together. We will print a list, show students who passed, and find the best score.</p><ol class="how-list"><li data-i18n-html="how1">Read the explanation and task.</li><li data-i18n-html="how2">Copy the <strong>whole program</strong> into one <code dir="ltr" translate="no">.cpp</code> file.</li><li data-i18n-html="how3">Replace <code dir="ltr" translate="no">____</code> with the missing part.</li><li data-i18n-html="how4">Run the program and compare the output.</li><li data-i18n-html="how5">Replace the old program with the next step.</li></ol><p class="rule" data-i18n-html="lab8.rule"><strong>Input rules.</strong> Use one word for each name, with Latin letters. Scores are integers from 0 to 100. Step 1 has no input. Step 2 reads one student. Steps 3 to 6 read three students. Do not type a size first. The passing score is 60 for this exercise.</p><noscript><p class="noscript" data-i18n="lab8.noscript">All programs and downloads work without JavaScript. Enable JavaScript to check gaps and save progress.</p></noscript></section>
+    <section class="example" aria-labelledby="example-title"><h2 id="example-title" data-i18n="lab8.example_title">A complete example</h2><p class="read" data-i18n-html="lab8.example_read"><code dir="ltr" translate="no">Student</code> is a type. <code dir="ltr" translate="no">student</code> is one variable. <code dir="ltr" translate="no">student.name</code> and <code dir="ltr" translate="no">student.score</code> are its fields. A dot selects a field.</p><div class="code-shell"><div class="code-bar"><span class="code-name" data-i18n="lab8.example_name">One student, two fields</span><div class="code-tools"><button type="button" data-copy-example data-i18n="copy_example">Copy example</button></div></div><pre tabindex="0" dir="ltr" translate="no"><code id="function-example" dir="ltr" translate="no">#include &lt;iostream&gt;
 #include &lt;string&gt;
 using namespace std;
 
@@ -29,23 +43,23 @@ struct Student {
 
 int main() {
     Student student;
-    student.name = &quot;Ali&quot;;
+    student.name = "Ali";
     student.score = 75;
-    cout &lt;&lt; student.name &lt;&lt; &quot; &quot;
-         &lt;&lt; student.score &lt;&lt; &quot;\n&quot;;
+    cout &lt;&lt; student.name &lt;&lt; " "
+         &lt;&lt; student.score &lt;&lt; "\n";
     return 0;
 }
-</code></pre></div><p class="hero-note">No input. Output: <code>Ali 75</code>. Notice the semicolon after the struct.</p></section>
+</code></pre></div><p class="hero-note" data-i18n-html="lab8.example_note">No input. Output: <code dir="ltr" translate="no">Ali 75</code>. Notice the semicolon after the struct.</p></section>
   </div>
 
 <section class="step" id="step-1" data-step="1" data-answer="80" aria-labelledby="title-1">
-  <header class="step-header"><span class="step-number" aria-hidden="true">01</span><div><p class="step-label">Step 1 of 6</p><h2 id="title-1">One student</h2></div></header>
-  <p class="read">A struct keeps related values together. Student has two fields. name is text. score is an integer. student.score = 75; stores 75 in the score field.</p>
-  <p class="task">Store the score 80. Replace ____ with one number.</p>
-  <details class="hint"><summary>Need a small hint?</summary><p>Use the score shown in the task. Write only the number.</p></details>
+  <header class="step-header"><span class="step-number" aria-hidden="true">01</span><div><p class="step-label" data-i18n="step_label" data-i18n-step="1">Step 1 of 6</p><h2 id="title-1" data-i18n="lab8.step1.title">One student</h2></div></header>
+  <p class="read" data-i18n-html="lab8.step1.read">A struct keeps related values together. Student has two fields. name is text. score is an integer. student.score = 75; stores 75 in the score field.</p>
+  <p class="task" data-i18n-html="lab8.step1.task">Store the score 80. Replace ____ with one number.</p>
+  <details class="hint"><summary data-i18n="hint">Need a small hint?</summary><p data-i18n-html="lab8.step1.hint">Use the score shown in the task. Write only the number.</p></details>
   <div class="code-shell">
-    <div class="code-bar"><span class="code-name">main.cpp <span class="gap-count">1 gap</span></span><div class="code-tools"><button type="button" data-copy aria-label="Copy full code for step 1">Copy full code</button><button type="button" data-download aria-label="Download C++ code for step 1">Download .cpp</button></div></div>
-    <pre tabindex="0" aria-label="Full C++ program for step 1"><code data-source="#include &lt;iostream&gt;
+    <div class="code-bar"><span class="code-name">main.cpp <span class="gap-count" data-i18n="one_gap">1 gap</span></span><div class="code-tools"><button type="button" data-copy aria-label="Copy full code for step 1" data-i18n="copy" data-i18n-aria="copy_aria" data-i18n-step="1">Copy full code</button><button type="button" data-download aria-label="Download C++ code for step 1" data-i18n="download" data-i18n-aria="download_aria" data-i18n-step="1">Download .cpp</button></div></div>
+    <pre tabindex="0" aria-label="Full C++ program for step 1" data-i18n-aria="code_aria" data-i18n-step="1" dir="ltr" translate="no"><code data-source='#include &lt;iostream&gt;
 #include &lt;string&gt;
 using namespace std;
 
@@ -56,13 +70,13 @@ struct Student {
 
 int main() {
     Student student;
-    student.name = &quot;Ali&quot;;
+    student.name = "Ali";
     student.score = ____;
-    cout &lt;&lt; student.name &lt;&lt; &quot; &quot;
-         &lt;&lt; student.score &lt;&lt; &quot;\n&quot;;
+    cout &lt;&lt; student.name &lt;&lt; " "
+         &lt;&lt; student.score &lt;&lt; "\n";
     return 0;
 }
-">#include &lt;iostream&gt;
+' dir="ltr" translate="no">#include &lt;iostream&gt;
 #include &lt;string&gt;
 using namespace std;
 
@@ -73,30 +87,30 @@ struct Student {
 
 int main() {
     Student student;
-    student.name = &quot;Ali&quot;;
+    student.name = "Ali";
     student.score = <mark class="code-gap">____</mark>;
-    cout &lt;&lt; student.name &lt;&lt; &quot; &quot;
-         &lt;&lt; student.score &lt;&lt; &quot;\n&quot;;
+    cout &lt;&lt; student.name &lt;&lt; " "
+         &lt;&lt; student.score &lt;&lt; "\n";
     return 0;
 }
 </code></pre>
   </div>
-  <form class="answer-form" aria-label="Check the missing part in step 1">
-    <label class="answer-label" for="answer-1">Write the missing part</label>
-    <div class="answer-controls"><input class="answer-input" id="answer-1" type="text" placeholder="Replace ____" maxlength="120" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="feedback-1"><button type="submit" class="button">Check gap</button></div>
-    <p class="feedback" id="feedback-1" aria-live="polite">This checks one gap. Run the full program in your C++ compiler.</p>
+  <form class="answer-form" aria-label="Check the missing part in step 1" data-i18n-aria="form_aria" data-i18n-step="1">
+    <label class="answer-label" for="answer-1" data-i18n="write_missing">Write the missing part</label>
+    <div class="answer-controls"><input class="answer-input" id="answer-1" type="text" placeholder="Replace ____" maxlength="120" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="feedback-1" data-i18n-placeholder="gap_placeholder" dir="ltr" translate="no"><button type="submit" class="button" data-i18n="check_gap">Check gap</button></div>
+    <p class="feedback" id="feedback-1" aria-live="polite" data-message="feedback_hint">This checks one gap. Run the full program in your C++ compiler.</p>
   </form>
-  <div class="checks"><div class="check-block"><h3>Input</h3><p>No input. The name and score are already in the program.</p></div><div class="check-block"><h3>Expected output</h3><pre>Ali 80</pre></div></div>
-  <div class="finish-row"><label class="done-label"><input type="checkbox" class="done-check">I ran this step in my C++ compiler.</label><a class="next-step" href="#step-2">Step 2 &rarr;</a></div>
+  <div class="checks"><div class="check-block"><h3 data-i18n="input">Input</h3><p data-i18n="lab8.input_1">No input. The name and score are already in the program.</p></div><div class="check-block"><h3 data-i18n="expected_output">Expected output</h3><pre dir="ltr" translate="no">Ali 80</pre></div></div>
+  <div class="finish-row"><label class="done-label"><input type="checkbox" class="done-check"><span data-i18n="ran">I ran this step in my C++ compiler.</span></label><a class="next-step" href="#step-2" data-i18n="next_step" data-i18n-step="2">Step 2 →</a></div>
 </section>
 <section class="step" id="step-2" data-step="2" data-answer="student.score" aria-labelledby="title-2">
-  <header class="step-header"><span class="step-number" aria-hidden="true">02</span><div><p class="step-label">Step 2 of 6</p><h2 id="title-2">Read one student</h2></div></header>
-  <p class="read">cin &gt;&gt; x; reads a value into x. student.name is the name field. student.score is the score field. Read the name first, then the score.</p>
-  <p class="task">Read a score into the student record. Replace ____ with the field access.</p>
-  <details class="hint"><summary>Need a small hint?</summary><p>Use the variable name student, a dot, and the field name score.</p></details>
+  <header class="step-header"><span class="step-number" aria-hidden="true">02</span><div><p class="step-label" data-i18n="step_label" data-i18n-step="2">Step 2 of 6</p><h2 id="title-2" data-i18n="lab8.step2.title">Read one student</h2></div></header>
+  <p class="read" data-i18n-html="lab8.step2.read">cin &gt;&gt; x; reads a value into x. student.name is the name field. student.score is the score field. Read the name first, then the score.</p>
+  <p class="task" data-i18n-html="lab8.step2.task">Read a score into the student record. Replace ____ with the field access.</p>
+  <details class="hint"><summary data-i18n="hint">Need a small hint?</summary><p data-i18n-html="lab8.step2.hint">Use the variable name student, a dot, and the field name score.</p></details>
   <div class="code-shell">
-    <div class="code-bar"><span class="code-name">main.cpp <span class="gap-count">1 gap</span></span><div class="code-tools"><button type="button" data-copy aria-label="Copy full code for step 2">Copy full code</button><button type="button" data-download aria-label="Download C++ code for step 2">Download .cpp</button></div></div>
-    <pre tabindex="0" aria-label="Full C++ program for step 2"><code data-source="#include &lt;iostream&gt;
+    <div class="code-bar"><span class="code-name">main.cpp <span class="gap-count" data-i18n="one_gap">1 gap</span></span><div class="code-tools"><button type="button" data-copy aria-label="Copy full code for step 2" data-i18n="copy" data-i18n-aria="copy_aria" data-i18n-step="2">Copy full code</button><button type="button" data-download aria-label="Download C++ code for step 2" data-i18n="download" data-i18n-aria="download_aria" data-i18n-step="2">Download .cpp</button></div></div>
+    <pre tabindex="0" aria-label="Full C++ program for step 2" data-i18n-aria="code_aria" data-i18n-step="2" dir="ltr" translate="no"><code data-source='#include &lt;iostream&gt;
 #include &lt;string&gt;
 using namespace std;
 
@@ -108,11 +122,11 @@ struct Student {
 int main() {
     Student student;
     cin &gt;&gt; student.name &gt;&gt; ____;
-    cout &lt;&lt; student.name &lt;&lt; &quot; &quot;
-         &lt;&lt; student.score &lt;&lt; &quot;\n&quot;;
+    cout &lt;&lt; student.name &lt;&lt; " "
+         &lt;&lt; student.score &lt;&lt; "\n";
     return 0;
 }
-">#include &lt;iostream&gt;
+' dir="ltr" translate="no">#include &lt;iostream&gt;
 #include &lt;string&gt;
 using namespace std;
 
@@ -124,28 +138,28 @@ struct Student {
 int main() {
     Student student;
     cin &gt;&gt; student.name &gt;&gt; <mark class="code-gap">____</mark>;
-    cout &lt;&lt; student.name &lt;&lt; &quot; &quot;
-         &lt;&lt; student.score &lt;&lt; &quot;\n&quot;;
+    cout &lt;&lt; student.name &lt;&lt; " "
+         &lt;&lt; student.score &lt;&lt; "\n";
     return 0;
 }
 </code></pre>
   </div>
-  <form class="answer-form" aria-label="Check the missing part in step 2">
-    <label class="answer-label" for="answer-2">Write the missing part</label>
-    <div class="answer-controls"><input class="answer-input" id="answer-2" type="text" placeholder="Replace ____" maxlength="120" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="feedback-2"><button type="submit" class="button">Check gap</button></div>
-    <p class="feedback" id="feedback-2" aria-live="polite">This checks one gap. Run the full program in your C++ compiler.</p>
+  <form class="answer-form" aria-label="Check the missing part in step 2" data-i18n-aria="form_aria" data-i18n-step="2">
+    <label class="answer-label" for="answer-2" data-i18n="write_missing">Write the missing part</label>
+    <div class="answer-controls"><input class="answer-input" id="answer-2" type="text" placeholder="Replace ____" maxlength="120" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="feedback-2" data-i18n-placeholder="gap_placeholder" dir="ltr" translate="no"><button type="submit" class="button" data-i18n="check_gap">Check gap</button></div>
+    <p class="feedback" id="feedback-2" aria-live="polite" data-message="feedback_hint">This checks one gap. Run the full program in your C++ compiler.</p>
   </form>
-  <div class="checks"><div class="check-block"><h3>Input</h3><pre>Ali 80</pre><p>Enter one name and one score.</p></div><div class="check-block"><h3>Expected output</h3><pre>Ali 80</pre></div></div>
-  <div class="finish-row"><label class="done-label"><input type="checkbox" class="done-check">I ran this step in my C++ compiler.</label><a class="next-step" href="#step-3">Step 3 &rarr;</a></div>
+  <div class="checks"><div class="check-block"><h3 data-i18n="input">Input</h3><pre dir="ltr" translate="no">Ali 80</pre><p data-i18n="lab8.input_2">Enter one name and one score.</p></div><div class="check-block"><h3 data-i18n="expected_output">Expected output</h3><pre dir="ltr" translate="no">Ali 80</pre></div></div>
+  <div class="finish-row"><label class="done-label"><input type="checkbox" class="done-check"><span data-i18n="ran">I ran this step in my C++ compiler.</span></label><a class="next-step" href="#step-3" data-i18n="next_step" data-i18n-step="3">Step 3 →</a></div>
 </section>
 <section class="step" id="step-3" data-step="3" data-answer="score" aria-labelledby="title-3">
-  <header class="step-header"><span class="step-number" aria-hidden="true">03</span><div><p class="step-label">Step 3 of 6</p><h2 id="title-3">A list of students</h2></div></header>
-  <p class="read">vector&lt;Student&gt; students(3); creates three Student records. students[i] is one record. students[i].score is its score field.</p>
-  <p class="task">Read each score. Replace ____ with the field name.</p>
-  <details class="hint"><summary>Need a small hint?</summary><p>The struct has the field score. The vector element is already before the dot.</p></details>
+  <header class="step-header"><span class="step-number" aria-hidden="true">03</span><div><p class="step-label" data-i18n="step_label" data-i18n-step="3">Step 3 of 6</p><h2 id="title-3" data-i18n="lab8.step3.title">A list of students</h2></div></header>
+  <p class="read" data-i18n-html="lab8.step3.read">vector&lt;Student&gt; students(3); creates three Student records. students[i] is one record. students[i].score is its score field.</p>
+  <p class="task" data-i18n-html="lab8.step3.task">Read each score. Replace ____ with the field name.</p>
+  <details class="hint"><summary data-i18n="hint">Need a small hint?</summary><p data-i18n-html="lab8.step3.hint">The struct has the field score. The vector element is already before the dot.</p></details>
   <div class="code-shell">
-    <div class="code-bar"><span class="code-name">main.cpp <span class="gap-count">1 gap</span></span><div class="code-tools"><button type="button" data-copy aria-label="Copy full code for step 3">Copy full code</button><button type="button" data-download aria-label="Download C++ code for step 3">Download .cpp</button></div></div>
-    <pre tabindex="0" aria-label="Full C++ program for step 3"><code data-source="#include &lt;iostream&gt;
+    <div class="code-bar"><span class="code-name">main.cpp <span class="gap-count" data-i18n="one_gap">1 gap</span></span><div class="code-tools"><button type="button" data-copy aria-label="Copy full code for step 3" data-i18n="copy" data-i18n-aria="copy_aria" data-i18n-step="3">Copy full code</button><button type="button" data-download aria-label="Download C++ code for step 3" data-i18n="download" data-i18n-aria="download_aria" data-i18n-step="3">Download .cpp</button></div></div>
+    <pre tabindex="0" aria-label="Full C++ program for step 3" data-i18n-aria="code_aria" data-i18n-step="3" dir="ltr" translate="no"><code data-source='#include &lt;iostream&gt;
 #include &lt;string&gt;
 #include &lt;vector&gt;
 using namespace std;
@@ -161,14 +175,14 @@ int main() {
         cin &gt;&gt; students[i].name;
         cin &gt;&gt; students[i].____;
     }
-    cout &lt;&lt; &quot;All:\n&quot;;
+    cout &lt;&lt; "All:\n";
     for (int i = 0; i &lt; 3; i++) {
-        cout &lt;&lt; students[i].name &lt;&lt; &quot; &quot;
-             &lt;&lt; students[i].score &lt;&lt; &quot;\n&quot;;
+        cout &lt;&lt; students[i].name &lt;&lt; " "
+             &lt;&lt; students[i].score &lt;&lt; "\n";
     }
     return 0;
 }
-">#include &lt;iostream&gt;
+' dir="ltr" translate="no">#include &lt;iostream&gt;
 #include &lt;string&gt;
 #include &lt;vector&gt;
 using namespace std;
@@ -184,36 +198,36 @@ int main() {
         cin &gt;&gt; students[i].name;
         cin &gt;&gt; students[i].<mark class="code-gap">____</mark>;
     }
-    cout &lt;&lt; &quot;All:\n&quot;;
+    cout &lt;&lt; "All:\n";
     for (int i = 0; i &lt; 3; i++) {
-        cout &lt;&lt; students[i].name &lt;&lt; &quot; &quot;
-             &lt;&lt; students[i].score &lt;&lt; &quot;\n&quot;;
+        cout &lt;&lt; students[i].name &lt;&lt; " "
+             &lt;&lt; students[i].score &lt;&lt; "\n";
     }
     return 0;
 }
 </code></pre>
   </div>
-  <form class="answer-form" aria-label="Check the missing part in step 3">
-    <label class="answer-label" for="answer-3">Write the missing part</label>
-    <div class="answer-controls"><input class="answer-input" id="answer-3" type="text" placeholder="Replace ____" maxlength="120" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="feedback-3"><button type="submit" class="button">Check gap</button></div>
-    <p class="feedback" id="feedback-3" aria-live="polite">This checks one gap. Run the full program in your C++ compiler.</p>
+  <form class="answer-form" aria-label="Check the missing part in step 3" data-i18n-aria="form_aria" data-i18n-step="3">
+    <label class="answer-label" for="answer-3" data-i18n="write_missing">Write the missing part</label>
+    <div class="answer-controls"><input class="answer-input" id="answer-3" type="text" placeholder="Replace ____" maxlength="120" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="feedback-3" data-i18n-placeholder="gap_placeholder" dir="ltr" translate="no"><button type="submit" class="button" data-i18n="check_gap">Check gap</button></div>
+    <p class="feedback" id="feedback-3" aria-live="polite" data-message="feedback_hint">This checks one gap. Run the full program in your C++ compiler.</p>
   </form>
-  <div class="checks"><div class="check-block"><h3>Input</h3><pre>Ali 80
+  <div class="checks"><div class="check-block"><h3 data-i18n="input">Input</h3><pre dir="ltr" translate="no">Ali 80
 Mona 55
-Omar 90</pre><p>Enter three records. Do not enter 3 first.</p></div><div class="check-block"><h3>Expected output</h3><pre>All:
+Omar 90</pre><p data-i18n="lab8.input_many">Enter three records. Do not enter 3 first.</p></div><div class="check-block"><h3 data-i18n="expected_output">Expected output</h3><pre dir="ltr" translate="no">All:
 Ali 80
 Mona 55
 Omar 90</pre></div></div>
-  <div class="finish-row"><label class="done-label"><input type="checkbox" class="done-check">I ran this step in my C++ compiler.</label><a class="next-step" href="#step-4">Step 4 &rarr;</a></div>
+  <div class="finish-row"><label class="done-label"><input type="checkbox" class="done-check"><span data-i18n="ran">I ran this step in my C++ compiler.</span></label><a class="next-step" href="#step-4" data-i18n="next_step" data-i18n-step="4">Step 4 →</a></div>
 </section>
 <section class="step" id="step-4" data-step="4" data-answer="&gt;=" aria-labelledby="title-4">
-  <header class="step-header"><span class="step-number" aria-hidden="true">04</span><div><p class="step-label">Step 4 of 6</p><h2 id="title-4">Students who passed</h2></div></header>
-  <p class="read">The passing score is 60. A student with 60 also passes. The operator &gt;= means greater than or equal to. The loop checks each record.</p>
-  <p class="task">Include students with a score of 60 or more. Replace ____ with one comparison operator.</p>
-  <details class="hint"><summary>Need a small hint?</summary><p>The score can be greater than 60 or equal to 60.</p></details>
+  <header class="step-header"><span class="step-number" aria-hidden="true">04</span><div><p class="step-label" data-i18n="step_label" data-i18n-step="4">Step 4 of 6</p><h2 id="title-4" data-i18n="lab8.step4.title">Students who passed</h2></div></header>
+  <p class="read" data-i18n-html="lab8.step4.read">The passing score is 60. A student with 60 also passes. The operator &gt;= means greater than or equal to. The loop checks each record.</p>
+  <p class="task" data-i18n-html="lab8.step4.task">Include students with a score of 60 or more. Replace ____ with one comparison operator.</p>
+  <details class="hint"><summary data-i18n="hint">Need a small hint?</summary><p data-i18n-html="lab8.step4.hint">The score can be greater than 60 or equal to 60.</p></details>
   <div class="code-shell">
-    <div class="code-bar"><span class="code-name">main.cpp <span class="gap-count">1 gap</span></span><div class="code-tools"><button type="button" data-copy aria-label="Copy full code for step 4">Copy full code</button><button type="button" data-download aria-label="Download C++ code for step 4">Download .cpp</button></div></div>
-    <pre tabindex="0" aria-label="Full C++ program for step 4"><code data-source="#include &lt;iostream&gt;
+    <div class="code-bar"><span class="code-name">main.cpp <span class="gap-count" data-i18n="one_gap">1 gap</span></span><div class="code-tools"><button type="button" data-copy aria-label="Copy full code for step 4" data-i18n="copy" data-i18n-aria="copy_aria" data-i18n-step="4">Copy full code</button><button type="button" data-download aria-label="Download C++ code for step 4" data-i18n="download" data-i18n-aria="download_aria" data-i18n-step="4">Download .cpp</button></div></div>
+    <pre tabindex="0" aria-label="Full C++ program for step 4" data-i18n-aria="code_aria" data-i18n-step="4" dir="ltr" translate="no"><code data-source='#include &lt;iostream&gt;
 #include &lt;string&gt;
 #include &lt;vector&gt;
 using namespace std;
@@ -229,21 +243,21 @@ int main() {
         cin &gt;&gt; students[i].name;
         cin &gt;&gt; students[i].score;
     }
-    cout &lt;&lt; &quot;All:\n&quot;;
+    cout &lt;&lt; "All:\n";
     for (int i = 0; i &lt; 3; i++) {
-        cout &lt;&lt; students[i].name &lt;&lt; &quot; &quot;
-             &lt;&lt; students[i].score &lt;&lt; &quot;\n&quot;;
+        cout &lt;&lt; students[i].name &lt;&lt; " "
+             &lt;&lt; students[i].score &lt;&lt; "\n";
     }
-    cout &lt;&lt; &quot;Passed:\n&quot;;
+    cout &lt;&lt; "Passed:\n";
     for (int i = 0; i &lt; 3; i++) {
         if (students[i].score ____ 60) {
-            cout &lt;&lt; students[i].name &lt;&lt; &quot; &quot;
-                 &lt;&lt; students[i].score &lt;&lt; &quot;\n&quot;;
+            cout &lt;&lt; students[i].name &lt;&lt; " "
+                 &lt;&lt; students[i].score &lt;&lt; "\n";
         }
     }
     return 0;
 }
-">#include &lt;iostream&gt;
+' dir="ltr" translate="no">#include &lt;iostream&gt;
 #include &lt;string&gt;
 #include &lt;vector&gt;
 using namespace std;
@@ -259,46 +273,46 @@ int main() {
         cin &gt;&gt; students[i].name;
         cin &gt;&gt; students[i].score;
     }
-    cout &lt;&lt; &quot;All:\n&quot;;
+    cout &lt;&lt; "All:\n";
     for (int i = 0; i &lt; 3; i++) {
-        cout &lt;&lt; students[i].name &lt;&lt; &quot; &quot;
-             &lt;&lt; students[i].score &lt;&lt; &quot;\n&quot;;
+        cout &lt;&lt; students[i].name &lt;&lt; " "
+             &lt;&lt; students[i].score &lt;&lt; "\n";
     }
-    cout &lt;&lt; &quot;Passed:\n&quot;;
+    cout &lt;&lt; "Passed:\n";
     for (int i = 0; i &lt; 3; i++) {
         if (students[i].score <mark class="code-gap">____</mark> 60) {
-            cout &lt;&lt; students[i].name &lt;&lt; &quot; &quot;
-                 &lt;&lt; students[i].score &lt;&lt; &quot;\n&quot;;
+            cout &lt;&lt; students[i].name &lt;&lt; " "
+                 &lt;&lt; students[i].score &lt;&lt; "\n";
         }
     }
     return 0;
 }
 </code></pre>
   </div>
-  <form class="answer-form" aria-label="Check the missing part in step 4">
-    <label class="answer-label" for="answer-4">Write the missing part</label>
-    <div class="answer-controls"><input class="answer-input" id="answer-4" type="text" placeholder="Replace ____" maxlength="120" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="feedback-4"><button type="submit" class="button">Check gap</button></div>
-    <p class="feedback" id="feedback-4" aria-live="polite">This checks one gap. Run the full program in your C++ compiler.</p>
+  <form class="answer-form" aria-label="Check the missing part in step 4" data-i18n-aria="form_aria" data-i18n-step="4">
+    <label class="answer-label" for="answer-4" data-i18n="write_missing">Write the missing part</label>
+    <div class="answer-controls"><input class="answer-input" id="answer-4" type="text" placeholder="Replace ____" maxlength="120" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="feedback-4" data-i18n-placeholder="gap_placeholder" dir="ltr" translate="no"><button type="submit" class="button" data-i18n="check_gap">Check gap</button></div>
+    <p class="feedback" id="feedback-4" aria-live="polite" data-message="feedback_hint">This checks one gap. Run the full program in your C++ compiler.</p>
   </form>
-  <div class="checks"><div class="check-block"><h3>Input</h3><pre>Ali 80
+  <div class="checks"><div class="check-block"><h3 data-i18n="input">Input</h3><pre dir="ltr" translate="no">Ali 80
 Mona 55
-Omar 90</pre><p>Enter three records. Do not enter 3 first.</p></div><div class="check-block"><h3>Expected output</h3><pre>All:
+Omar 90</pre><p data-i18n="lab8.input_many">Enter three records. Do not enter 3 first.</p></div><div class="check-block"><h3 data-i18n="expected_output">Expected output</h3><pre dir="ltr" translate="no">All:
 Ali 80
 Mona 55
 Omar 90
 Passed:
 Ali 80
 Omar 90</pre></div></div>
-  <div class="finish-row"><label class="done-label"><input type="checkbox" class="done-check">I ran this step in my C++ compiler.</label><a class="next-step" href="#step-5">Step 5 &rarr;</a></div>
+  <div class="finish-row"><label class="done-label"><input type="checkbox" class="done-check"><span data-i18n="ran">I ran this step in my C++ compiler.</span></label><a class="next-step" href="#step-5" data-i18n="next_step" data-i18n-step="5">Step 5 →</a></div>
 </section>
 <section class="step" id="step-5" data-step="5" data-answer="i" aria-labelledby="title-5">
-  <header class="step-header"><span class="step-number" aria-hidden="true">05</span><div><p class="step-label">Step 5 of 6</p><h2 id="title-5">The best score</h2></div></header>
-  <p class="read">best stores an index. It starts at 0, the first student. When the current score is higher, store the current index i in best. Use &gt; to keep the first student when scores are equal.</p>
-  <p class="task">Store the index of the current student. Replace ____ with the loop variable.</p>
-  <details class="hint"><summary>Need a small hint?</summary><p>The for loop names its current position i.</p></details>
+  <header class="step-header"><span class="step-number" aria-hidden="true">05</span><div><p class="step-label" data-i18n="step_label" data-i18n-step="5">Step 5 of 6</p><h2 id="title-5" data-i18n="lab8.step5.title">The best score</h2></div></header>
+  <p class="read" data-i18n-html="lab8.step5.read">best stores an index. It starts at 0, the first student. When the current score is higher, store the current index i in best. Use &gt; to keep the first student when scores are equal.</p>
+  <p class="task" data-i18n-html="lab8.step5.task">Store the index of the current student. Replace ____ with the loop variable.</p>
+  <details class="hint"><summary data-i18n="hint">Need a small hint?</summary><p data-i18n-html="lab8.step5.hint">The for loop names its current position i.</p></details>
   <div class="code-shell">
-    <div class="code-bar"><span class="code-name">main.cpp <span class="gap-count">1 gap</span></span><div class="code-tools"><button type="button" data-copy aria-label="Copy full code for step 5">Copy full code</button><button type="button" data-download aria-label="Download C++ code for step 5">Download .cpp</button></div></div>
-    <pre tabindex="0" aria-label="Full C++ program for step 5"><code data-source="#include &lt;iostream&gt;
+    <div class="code-bar"><span class="code-name">main.cpp <span class="gap-count" data-i18n="one_gap">1 gap</span></span><div class="code-tools"><button type="button" data-copy aria-label="Copy full code for step 5" data-i18n="copy" data-i18n-aria="copy_aria" data-i18n-step="5">Copy full code</button><button type="button" data-download aria-label="Download C++ code for step 5" data-i18n="download" data-i18n-aria="download_aria" data-i18n-step="5">Download .cpp</button></div></div>
+    <pre tabindex="0" aria-label="Full C++ program for step 5" data-i18n-aria="code_aria" data-i18n-step="5" dir="ltr" translate="no"><code data-source='#include &lt;iostream&gt;
 #include &lt;string&gt;
 #include &lt;vector&gt;
 using namespace std;
@@ -314,16 +328,16 @@ int main() {
         cin &gt;&gt; students[i].name;
         cin &gt;&gt; students[i].score;
     }
-    cout &lt;&lt; &quot;All:\n&quot;;
+    cout &lt;&lt; "All:\n";
     for (int i = 0; i &lt; 3; i++) {
-        cout &lt;&lt; students[i].name &lt;&lt; &quot; &quot;
-             &lt;&lt; students[i].score &lt;&lt; &quot;\n&quot;;
+        cout &lt;&lt; students[i].name &lt;&lt; " "
+             &lt;&lt; students[i].score &lt;&lt; "\n";
     }
-    cout &lt;&lt; &quot;Passed:\n&quot;;
+    cout &lt;&lt; "Passed:\n";
     for (int i = 0; i &lt; 3; i++) {
         if (students[i].score &gt;= 60) {
-            cout &lt;&lt; students[i].name &lt;&lt; &quot; &quot;
-                 &lt;&lt; students[i].score &lt;&lt; &quot;\n&quot;;
+            cout &lt;&lt; students[i].name &lt;&lt; " "
+                 &lt;&lt; students[i].score &lt;&lt; "\n";
         }
     }
     int best = 0;
@@ -333,11 +347,11 @@ int main() {
             best = ____;
         }
     }
-    cout &lt;&lt; &quot;Best: &quot; &lt;&lt; students[best].name
-         &lt;&lt; &quot; &quot; &lt;&lt; students[best].score &lt;&lt; &quot;\n&quot;;
+    cout &lt;&lt; "Best: " &lt;&lt; students[best].name
+         &lt;&lt; " " &lt;&lt; students[best].score &lt;&lt; "\n";
     return 0;
 }
-">#include &lt;iostream&gt;
+' dir="ltr" translate="no">#include &lt;iostream&gt;
 #include &lt;string&gt;
 #include &lt;vector&gt;
 using namespace std;
@@ -353,16 +367,16 @@ int main() {
         cin &gt;&gt; students[i].name;
         cin &gt;&gt; students[i].score;
     }
-    cout &lt;&lt; &quot;All:\n&quot;;
+    cout &lt;&lt; "All:\n";
     for (int i = 0; i &lt; 3; i++) {
-        cout &lt;&lt; students[i].name &lt;&lt; &quot; &quot;
-             &lt;&lt; students[i].score &lt;&lt; &quot;\n&quot;;
+        cout &lt;&lt; students[i].name &lt;&lt; " "
+             &lt;&lt; students[i].score &lt;&lt; "\n";
     }
-    cout &lt;&lt; &quot;Passed:\n&quot;;
+    cout &lt;&lt; "Passed:\n";
     for (int i = 0; i &lt; 3; i++) {
         if (students[i].score &gt;= 60) {
-            cout &lt;&lt; students[i].name &lt;&lt; &quot; &quot;
-                 &lt;&lt; students[i].score &lt;&lt; &quot;\n&quot;;
+            cout &lt;&lt; students[i].name &lt;&lt; " "
+                 &lt;&lt; students[i].score &lt;&lt; "\n";
         }
     }
     int best = 0;
@@ -372,20 +386,20 @@ int main() {
             best = <mark class="code-gap">____</mark>;
         }
     }
-    cout &lt;&lt; &quot;Best: &quot; &lt;&lt; students[best].name
-         &lt;&lt; &quot; &quot; &lt;&lt; students[best].score &lt;&lt; &quot;\n&quot;;
+    cout &lt;&lt; "Best: " &lt;&lt; students[best].name
+         &lt;&lt; " " &lt;&lt; students[best].score &lt;&lt; "\n";
     return 0;
 }
 </code></pre>
   </div>
-  <form class="answer-form" aria-label="Check the missing part in step 5">
-    <label class="answer-label" for="answer-5">Write the missing part</label>
-    <div class="answer-controls"><input class="answer-input" id="answer-5" type="text" placeholder="Replace ____" maxlength="120" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="feedback-5"><button type="submit" class="button">Check gap</button></div>
-    <p class="feedback" id="feedback-5" aria-live="polite">This checks one gap. Run the full program in your C++ compiler.</p>
+  <form class="answer-form" aria-label="Check the missing part in step 5" data-i18n-aria="form_aria" data-i18n-step="5">
+    <label class="answer-label" for="answer-5" data-i18n="write_missing">Write the missing part</label>
+    <div class="answer-controls"><input class="answer-input" id="answer-5" type="text" placeholder="Replace ____" maxlength="120" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="feedback-5" data-i18n-placeholder="gap_placeholder" dir="ltr" translate="no"><button type="submit" class="button" data-i18n="check_gap">Check gap</button></div>
+    <p class="feedback" id="feedback-5" aria-live="polite" data-message="feedback_hint">This checks one gap. Run the full program in your C++ compiler.</p>
   </form>
-  <div class="checks"><div class="check-block"><h3>Input</h3><pre>Ali 80
+  <div class="checks"><div class="check-block"><h3 data-i18n="input">Input</h3><pre dir="ltr" translate="no">Ali 80
 Mona 55
-Omar 90</pre><p>Enter three records. Do not enter 3 first.</p></div><div class="check-block"><h3>Expected output</h3><pre>All:
+Omar 90</pre><p data-i18n="lab8.input_many">Enter three records. Do not enter 3 first.</p></div><div class="check-block"><h3 data-i18n="expected_output">Expected output</h3><pre dir="ltr" translate="no">All:
 Ali 80
 Mona 55
 Omar 90
@@ -393,16 +407,16 @@ Passed:
 Ali 80
 Omar 90
 Best: Omar 90</pre></div></div>
-  <div class="finish-row"><label class="done-label"><input type="checkbox" class="done-check">I ran this step in my C++ compiler.</label><a class="next-step" href="#step-6">Step 6 &rarr;</a></div>
+  <div class="finish-row"><label class="done-label"><input type="checkbox" class="done-check"><span data-i18n="ran">I ran this step in my C++ compiler.</span></label><a class="next-step" href="#step-6" data-i18n="next_step" data-i18n-step="6">Step 6 →</a></div>
 </section>
 <section class="step" id="step-6" data-step="6" data-answer="students[i]" aria-labelledby="title-6">
-  <header class="step-header"><span class="step-number" aria-hidden="true">06</span><div><p class="step-label">Step 6 of 6</p><h2 id="title-6">A function for a student</h2></div></header>
-  <p class="read">isPassed gets one Student record and returns true or false. isPassed(student) checks one record. students[i] is the current Student record in the loop.</p>
-  <p class="task">Pass the current record to isPassed. Replace ____ with one vector element.</p>
-  <details class="hint"><summary>Need a small hint?</summary><p>Use the vector name students and the index [i]. Pass the whole record.</p></details>
+  <header class="step-header"><span class="step-number" aria-hidden="true">06</span><div><p class="step-label" data-i18n="step_label" data-i18n-step="6">Step 6 of 6</p><h2 id="title-6" data-i18n="lab8.step6.title">A function for a student</h2></div></header>
+  <p class="read" data-i18n-html="lab8.step6.read">isPassed gets one Student record and returns true or false. isPassed(student) checks one record. students[i] is the current Student record in the loop.</p>
+  <p class="task" data-i18n-html="lab8.step6.task">Pass the current record to isPassed. Replace ____ with one vector element.</p>
+  <details class="hint"><summary data-i18n="hint">Need a small hint?</summary><p data-i18n-html="lab8.step6.hint">Use the vector name students and the index [i]. Pass the whole record.</p></details>
   <div class="code-shell">
-    <div class="code-bar"><span class="code-name">main.cpp <span class="gap-count">1 gap</span></span><div class="code-tools"><button type="button" data-copy aria-label="Copy full code for step 6">Copy full code</button><button type="button" data-download aria-label="Download C++ code for step 6">Download .cpp</button></div></div>
-    <pre tabindex="0" aria-label="Full C++ program for step 6"><code data-source="#include &lt;iostream&gt;
+    <div class="code-bar"><span class="code-name">main.cpp <span class="gap-count" data-i18n="one_gap">1 gap</span></span><div class="code-tools"><button type="button" data-copy aria-label="Copy full code for step 6" data-i18n="copy" data-i18n-aria="copy_aria" data-i18n-step="6">Copy full code</button><button type="button" data-download aria-label="Download C++ code for step 6" data-i18n="download" data-i18n-aria="download_aria" data-i18n-step="6">Download .cpp</button></div></div>
+    <pre tabindex="0" aria-label="Full C++ program for step 6" data-i18n-aria="code_aria" data-i18n-step="6" dir="ltr" translate="no"><code data-source='#include &lt;iostream&gt;
 #include &lt;string&gt;
 #include &lt;vector&gt;
 using namespace std;
@@ -422,16 +436,16 @@ int main() {
         cin &gt;&gt; students[i].name;
         cin &gt;&gt; students[i].score;
     }
-    cout &lt;&lt; &quot;All:\n&quot;;
+    cout &lt;&lt; "All:\n";
     for (int i = 0; i &lt; 3; i++) {
-        cout &lt;&lt; students[i].name &lt;&lt; &quot; &quot;
-             &lt;&lt; students[i].score &lt;&lt; &quot;\n&quot;;
+        cout &lt;&lt; students[i].name &lt;&lt; " "
+             &lt;&lt; students[i].score &lt;&lt; "\n";
     }
-    cout &lt;&lt; &quot;Passed:\n&quot;;
+    cout &lt;&lt; "Passed:\n";
     for (int i = 0; i &lt; 3; i++) {
         if (isPassed(____)) {
-            cout &lt;&lt; students[i].name &lt;&lt; &quot; &quot;
-                 &lt;&lt; students[i].score &lt;&lt; &quot;\n&quot;;
+            cout &lt;&lt; students[i].name &lt;&lt; " "
+                 &lt;&lt; students[i].score &lt;&lt; "\n";
         }
     }
     int best = 0;
@@ -441,11 +455,11 @@ int main() {
             best = i;
         }
     }
-    cout &lt;&lt; &quot;Best: &quot; &lt;&lt; students[best].name
-         &lt;&lt; &quot; &quot; &lt;&lt; students[best].score &lt;&lt; &quot;\n&quot;;
+    cout &lt;&lt; "Best: " &lt;&lt; students[best].name
+         &lt;&lt; " " &lt;&lt; students[best].score &lt;&lt; "\n";
     return 0;
 }
-">#include &lt;iostream&gt;
+' dir="ltr" translate="no">#include &lt;iostream&gt;
 #include &lt;string&gt;
 #include &lt;vector&gt;
 using namespace std;
@@ -465,16 +479,16 @@ int main() {
         cin &gt;&gt; students[i].name;
         cin &gt;&gt; students[i].score;
     }
-    cout &lt;&lt; &quot;All:\n&quot;;
+    cout &lt;&lt; "All:\n";
     for (int i = 0; i &lt; 3; i++) {
-        cout &lt;&lt; students[i].name &lt;&lt; &quot; &quot;
-             &lt;&lt; students[i].score &lt;&lt; &quot;\n&quot;;
+        cout &lt;&lt; students[i].name &lt;&lt; " "
+             &lt;&lt; students[i].score &lt;&lt; "\n";
     }
-    cout &lt;&lt; &quot;Passed:\n&quot;;
+    cout &lt;&lt; "Passed:\n";
     for (int i = 0; i &lt; 3; i++) {
         if (isPassed(<mark class="code-gap">____</mark>)) {
-            cout &lt;&lt; students[i].name &lt;&lt; &quot; &quot;
-                 &lt;&lt; students[i].score &lt;&lt; &quot;\n&quot;;
+            cout &lt;&lt; students[i].name &lt;&lt; " "
+                 &lt;&lt; students[i].score &lt;&lt; "\n";
         }
     }
     int best = 0;
@@ -484,20 +498,20 @@ int main() {
             best = i;
         }
     }
-    cout &lt;&lt; &quot;Best: &quot; &lt;&lt; students[best].name
-         &lt;&lt; &quot; &quot; &lt;&lt; students[best].score &lt;&lt; &quot;\n&quot;;
+    cout &lt;&lt; "Best: " &lt;&lt; students[best].name
+         &lt;&lt; " " &lt;&lt; students[best].score &lt;&lt; "\n";
     return 0;
 }
 </code></pre>
   </div>
-  <form class="answer-form" aria-label="Check the missing part in step 6">
-    <label class="answer-label" for="answer-6">Write the missing part</label>
-    <div class="answer-controls"><input class="answer-input" id="answer-6" type="text" placeholder="Replace ____" maxlength="120" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="feedback-6"><button type="submit" class="button">Check gap</button></div>
-    <p class="feedback" id="feedback-6" aria-live="polite">This checks one gap. Run the full program in your C++ compiler.</p>
+  <form class="answer-form" aria-label="Check the missing part in step 6" data-i18n-aria="form_aria" data-i18n-step="6">
+    <label class="answer-label" for="answer-6" data-i18n="write_missing">Write the missing part</label>
+    <div class="answer-controls"><input class="answer-input" id="answer-6" type="text" placeholder="Replace ____" maxlength="120" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="feedback-6" data-i18n-placeholder="gap_placeholder" dir="ltr" translate="no"><button type="submit" class="button" data-i18n="check_gap">Check gap</button></div>
+    <p class="feedback" id="feedback-6" aria-live="polite" data-message="feedback_hint">This checks one gap. Run the full program in your C++ compiler.</p>
   </form>
-  <div class="checks"><div class="check-block"><h3>Input</h3><pre>Ali 80
+  <div class="checks"><div class="check-block"><h3 data-i18n="input">Input</h3><pre dir="ltr" translate="no">Ali 80
 Mona 55
-Omar 90</pre><p>Enter three records. Do not enter 3 first.</p></div><div class="check-block"><h3>Expected output</h3><pre>All:
+Omar 90</pre><p data-i18n="lab8.input_many">Enter three records. Do not enter 3 first.</p></div><div class="check-block"><h3 data-i18n="expected_output">Expected output</h3><pre dir="ltr" translate="no">All:
 Ali 80
 Mona 55
 Omar 90
@@ -505,11 +519,11 @@ Passed:
 Ali 80
 Omar 90
 Best: Omar 90</pre></div></div>
-  <div class="finish-row"><label class="done-label"><input type="checkbox" class="done-check">I ran this step in my C++ compiler.</label><a class="next-step" href="#independent">Small task &rarr;</a></div>
+  <div class="finish-row"><label class="done-label"><input type="checkbox" class="done-check"><span data-i18n="ran">I ran this step in my C++ compiler.</span></label><a class="next-step" href="#independent" data-i18n="small_task" data-i18n-step="7">Small task →</a></div>
 </section>
-  <section class="words" id="independent" aria-labelledby="independent-title"><p class="eyebrow">After Step 6</p><h2 id="independent-title">A small independent task</h2><p>Add a counter called <code>passedCount</code>. Start it at 0 before the loop. Use <code>isPassed</code>. Add 1 when a student passes. Print the count after the loop.</p><p>For Ali 80, Mona 55 and Omar 90, the new line is <code>Passed count: 2</code>.</p><details class="hint"><summary>Need a small hint?</summary><p>The loop already has an <code>if</code> that checks <code>isPassed(students[i])</code>. Put the counter update inside that <code>if</code>.</p></details></section>
-  <section class="words" id="words" aria-labelledby="words-title"><p class="eyebrow">A small reminder</p><h2 id="words-title">Useful words</h2><dl><dt>struct</dt><dd>A type with fields.</dd><dt>field</dt><dd>One value inside a record, for example <code>score</code>.</dd><dt>record</dt><dd>One <code>Student</code> value with its name and score.</dd><dt>dot</dt><dd><code>.</code> selects a field, as in <code>student.score</code>.</dd><dt>index</dt><dd>A position in the vector. The first is 0.</dd><dt>best</dt><dd>The index of the student with the highest score in our program.</dd><dt>passed</dt><dd>A score of 60 or more in this exercise.</dd><dt>bool</dt><dd>A type with two values: <code>true</code> and <code>false</code>.</dd></dl><p class="rule"><strong>Final check.</strong> Show the struct, a field, an index, and a call to <code>isPassed</code>. Test scores 59, 60 and 61. If two students have the same best score, the main program selects the first one.</p></section>
-  <section class="words" aria-labelledby="extension-title"><p class="eyebrow">Optional challenge</p><h2 id="extension-title">A student ranking</h2><p>Read <code>n</code>, then <code>n</code> student records. Allow 0 to 1000 records. Print <code>Ranking:</code> and sort by score, highest first. For equal scores, compare names with the standard <code>string</code> operator <code>&lt;</code>. Then print <code>Leaders:</code> and all students with the highest score, in ranking order.</p><p>For zero records, print only <code>EMPTY</code>. For an invalid size, invalid score, or missing input, print only <code>ERROR</code>. Scores must be from 0 to 100. Hint: read about <code>std::sort</code> and a comparison function.</p></section>
-  <footer class="closing"><a href="lab7.html">Previous lesson: functions and vectors</a><a href="https://github.com/Dozzka/CPP_LABS" target="_blank" rel="noopener noreferrer">View on GitHub &nearr;</a></footer>
+  <section class="words" id="independent" aria-labelledby="independent-title"><p class="eyebrow" data-i18n="lab8.independent_eyebrow">After Step 6</p><h2 id="independent-title" data-i18n="lab8.independent_title">A small independent task</h2><p data-i18n-html="lab8.independent_text">Add a counter called <code dir="ltr" translate="no">passedCount</code>. Start it at 0 before the loop. Use <code dir="ltr" translate="no">isPassed</code>. Add 1 when a student passes. Print the count after the loop.</p><p data-i18n-html="lab8.independent_sample">For Ali 80, Mona 55 and Omar 90, the new line is <code dir="ltr" translate="no">Passed count: 2</code>.</p><details class="hint"><summary data-i18n="hint">Need a small hint?</summary><p data-i18n-html="lab8.independent_hint">The loop already has an <code dir="ltr" translate="no">if</code> that checks <code dir="ltr" translate="no">isPassed(students[i])</code>. Put the counter update inside that <code dir="ltr" translate="no">if</code>.</p></details></section>
+  <section class="words" id="words" aria-labelledby="words-title"><p class="eyebrow" data-i18n="reminder">A small reminder</p><h2 id="words-title" data-i18n="words">Useful words</h2><dl><dt data-i18n="lab8.word0.term">struct</dt><dd data-i18n-html="lab8.word0.definition">A type with fields.</dd><dt data-i18n="lab8.word1.term">field</dt><dd data-i18n-html="lab8.word1.definition">One value inside a record, for example <code dir="ltr" translate="no">score</code>.</dd><dt data-i18n="lab8.word2.term">record</dt><dd data-i18n-html="lab8.word2.definition">One <code dir="ltr" translate="no">Student</code> value with its name and score.</dd><dt data-i18n="lab8.word3.term">dot</dt><dd data-i18n-html="lab8.word3.definition"><code dir="ltr" translate="no">.</code> selects a field, as in <code dir="ltr" translate="no">student.score</code>.</dd><dt data-i18n="lab8.word4.term">index</dt><dd data-i18n-html="lab8.word4.definition">A position in the vector. The first is 0.</dd><dt data-i18n="lab8.word5.term">best</dt><dd data-i18n-html="lab8.word5.definition">The index of the student with the highest score in our program.</dd><dt data-i18n="lab8.word6.term">passed</dt><dd data-i18n-html="lab8.word6.definition">A score of 60 or more in this exercise.</dd><dt data-i18n="lab8.word7.term">bool</dt><dd data-i18n-html="lab8.word7.definition">A type with two values: <code dir="ltr" translate="no">true</code> and <code dir="ltr" translate="no">false</code>.</dd></dl><p class="rule" data-i18n-html="lab8.final_check"><strong>Final check.</strong> Show the struct, a field, an index, and a call to <code dir="ltr" translate="no">isPassed</code>. Test scores 59, 60 and 61. If two students have the same best score, the main program selects the first one.</p></section>
+  <section class="words" aria-labelledby="extension-title"><p class="eyebrow" data-i18n="lab8.extension_eyebrow">Optional challenge</p><h2 id="extension-title" data-i18n="lab8.extension_title">A student ranking</h2><p data-i18n-html="lab8.extension_text">Read <code dir="ltr" translate="no">n</code>, then <code dir="ltr" translate="no">n</code> student records. Allow 0 to 1000 records. Print <code dir="ltr" translate="no">Ranking:</code> and sort by score, highest first. For equal scores, compare names with the standard <code dir="ltr" translate="no">string</code> operator <code dir="ltr" translate="no">&lt;</code>. Then print <code dir="ltr" translate="no">Leaders:</code> and all students with the highest score, in ranking order.</p><p data-i18n-html="lab8.extension_rules">For zero records, print only <code dir="ltr" translate="no">EMPTY</code>. For an invalid size, invalid score, or missing input, print only <code dir="ltr" translate="no">ERROR</code>. Scores must be from 0 to 100. Hint: read about <code dir="ltr" translate="no">std::sort</code> and a comparison function.</p></section>
+  <footer class="closing"><a href="lab7.html" data-i18n="lab8.previous">Previous lesson: functions and vectors</a><a href="https://github.com/Dozzka/CPP_LABS" target="_blank" rel="noopener noreferrer" data-i18n="view_github">View on GitHub &amp;nearr;</a></footer>
 </div></main><div class="status-toast" id="global-status" role="status" aria-live="polite"></div>
 </body></html>
